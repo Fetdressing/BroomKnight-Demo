@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db20be59fbc54d4692f365f7cc386ed, type: 3}
+  m_Name: Classic
+  m_EditorClassIdentifier: 
+  m_name: Classic
+  m_obj: {fileID: 1735253905991534, guid: 4a764985dc9759d48add97eda4e83032, type: 2}
