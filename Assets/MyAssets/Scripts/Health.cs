@@ -49,6 +49,26 @@ public class Health : MonoBehaviour {
         {
             var hitobj = JEffectPool.CreateEffect(m_deathParticle);
             hitobj.transform.position = transform.position;
+            hitobj.transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
+            //hitobj.transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, hitobj.transform.rotation.eulerAngles.y, hitobj.transform.rotation.eulerAngles.z); //endast för 2D
+        }
+
+        Destroy(gameObject);
+    }
+
+    public void M_Die(Vector3 vec)
+    {
+        if (m_deathParticle)
+        {
+            var hitobj = JEffectPool.CreateEffect(m_deathParticle);
+            ExplosionChildren expl = hitobj.GetComponent<ExplosionChildren>();
+            if (expl)
+            {
+                expl.Explode(vec);
+            }
+            hitobj.transform.position = transform.position;
+            hitobj.transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
+            //hitobj.transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, hitobj.transform.rotation.eulerAngles.y, hitobj.transform.rotation.eulerAngles.z); //endast för 2D
         }
 
         Destroy(gameObject);

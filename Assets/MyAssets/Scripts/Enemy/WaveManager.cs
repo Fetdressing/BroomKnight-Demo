@@ -16,6 +16,7 @@ public class WaveUnit
 public class Wave
 {
     public string m_waveName = "Basic wave";
+    public float m_beginTime = 3;
     public float m_duration = 20;
     public WaveUnit[] m_units;
 }
@@ -36,6 +37,7 @@ public class WaveManager : MonoBehaviour
 
     IEnumerator M_RunWaves()
     {
+        yield return new WaitForSeconds(4.0f); //start time
         while(true)
         {
             m_spawner.SendWave(m_waves[m_waveIndex]);

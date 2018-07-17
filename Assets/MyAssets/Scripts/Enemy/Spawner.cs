@@ -35,12 +35,14 @@ public class Spawner : MonoBehaviour {
     IEnumerator M_Spawn(Wave wave)
     {
         int waveUnitIndex = 0;
+        yield return new WaitForSeconds(wave.m_beginTime);
         while(true)
         {
             WaveUnit unit = wave.m_units[waveUnitIndex];
             yield return new WaitForSeconds(unit.m_spawnDelay);
 
-            var o = Instantiate(unit.m_enemy.m_obj.gameObject, M_GetSpawnPosition(SpawnPosType.Iterating), Quaternion.identity);
+            var o = Instantiate(unit.m_enemy.m_obj.gameObject, M_GetSpawnPosition(unit.m_spawnPosType), Quaternion.identity);
+            //o.transform.rotation = M_GetSpawnRotation(unit.m_spawnPosType);
 
             waveUnitIndex++;
             if(waveUnitIndex >= wave.m_units.Length)
