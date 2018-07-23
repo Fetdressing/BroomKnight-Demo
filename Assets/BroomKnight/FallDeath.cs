@@ -5,10 +5,13 @@ using UnityEngine;
 public class FallDeath : MonoBehaviour {
     private Health m_health;
     private Rigidbody m_rigidbody;
-	// Use this for initialization
-	void Awake () {
+
+    private Animator m_animator;
+    // Use this for initialization
+    void Awake () {
         m_health = transform.root.GetComponent<Health>();
         m_rigidbody = transform.root.GetComponent<Rigidbody>();
+        m_animator = transform.root.GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -26,5 +29,10 @@ public class FallDeath : MonoBehaviour {
         {
             m_health.M_Die(m_rigidbody.velocity);
         }
+    }
+
+    public void FallingAnim()
+    {
+        m_animator.SetTrigger("Falling");
     }
 }

@@ -28,20 +28,22 @@ public class WaveManager : MonoBehaviour
 
     protected Spawner m_spawner;
 
+    public float m_startTime = 4.0f;
+
     void Awake()
     {
-        m_spawner = FindObjectOfType<Spawner>();
+        m_spawner = GetComponentInChildren<Spawner>();
 
         StartCoroutine(M_RunWaves());
     }
 
     IEnumerator M_RunWaves()
     {
-        yield return new WaitForSeconds(4.0f); //start time
+        yield return new WaitForSeconds(m_startTime); //start time
         while(true)
         {
             m_spawner.SendWave(m_waves[m_waveIndex]);
-            yield return new WaitForSeconds(m_waves[m_waveIndex].m_duration);
+            yield return new WaitForSeconds(m_waves[m_waveIndex].m_duration + m_waves[m_waveIndex].m_beginTime);
 
             m_waveIndex++;
             if(m_waveIndex >= m_waves.Length)

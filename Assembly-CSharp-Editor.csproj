@@ -51,17 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Light2D\Editor\Light2DMenu.cs" />
-     <Compile Include="Assets\Light2D\Editor\LightingSystemCreationWindow.cs" />
-     <Compile Include="Assets\Light2D\Editor\LightingSystemEditor.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\BlockTilingInfoDrawer.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\EditorCameraWindow.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\HingeAutoRotatorEditor.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\HingeJointUtil.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\LandingLegEditor.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\Point2Drawer.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\ReadOnlyDrawer.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\ScriptableObjectCreatorWindow.cs" />
      <Compile Include="Assets\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
      <Compile Include="Assets\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
      <Compile Include="Assets\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />

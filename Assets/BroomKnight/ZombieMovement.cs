@@ -63,8 +63,8 @@ public class ZombieMovement : MonoBehaviour
         float velY = m_rigidbody.velocity.y;
         if (currVel.magnitude > m_maxSpeed)
         {
-            m_rigidbody.velocity = m_rigidbody.velocity.normalized * m_maxSpeed;
-            currVel = m_rigidbody.velocity;
+            //m_rigidbody.velocity = m_rigidbody.velocity.normalized * m_maxSpeed;
+            currVel = m_rigidbody.velocity.normalized * m_maxSpeed;
             m_rigidbody.velocity = new Vector3(currVel.x, velY, currVel.z);
         }
     }

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SpriteAlphaFade : MonoBehaviour {
     private Image image;
     private Color startColor;
+    public float startAlpha = 1;
 
     public void Fade()
     {
@@ -17,8 +18,8 @@ public class SpriteAlphaFade : MonoBehaviour {
 
     IEnumerator StartFade()
     {
-        float alphaVal = image.color.a;
-        while(image.color.a > 0.0f)
+        float alphaVal = startAlpha;
+        while (image.color.a > 0.0f)
         {
             alphaVal -= Time.deltaTime * 0.3f;
             image.color = new Color(startColor.r, startColor.g, startColor.b, alphaVal);

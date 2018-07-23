@@ -4,4 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/MenuDemoScene.unity
+    guid: 55e90027512b9d1479178257b958331b
+  - enabled: 1
+    path: Assets/MyAssets/Scenes/BroomKnight.unity
+    guid: 7d144ed48a2baa14fa7ea2ba49e8cec4
+  m_configObjects: {}

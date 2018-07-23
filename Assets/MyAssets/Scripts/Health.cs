@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour {
     [System.NonSerialized]
@@ -12,8 +13,23 @@ public class Health : MonoBehaviour {
     [System.NonSerialized]
     public bool m_immortal = false;
     protected IEnumerator m_immortalCo;
+
+    private static Text killCountText;
+    private static int killCount = 0;
+   
+    public int GetKillCount()
+    {
+        return killCount;
+    }
+
+    [System.NonSerialized] public bool m_killedbyPlayer = false;
 	// Use this for initialization
 	void Awake () {
+        if(killCountText == null)
+        {
+            killCountText = GameObject.FindGameObjectWithTag("KillCount").GetComponent<Text>();
+        }
+
         m_currHealth = m_maxHealth;
 
         if(m_deathParticle)
@@ -22,6 +38,13 @@ public class Health : MonoBehaviour {
         }
 
         m_immortal = false;
+
+        m_killedbyPlayer = false;
+    }
+
+    void OnEnable()
+    {
+        m_killedbyPlayer = false;
     }
 
     public bool M_Damage(int d) //return false if died
@@ -71,6 +94,12 @@ public class Health : MonoBehaviour {
             //hitobj.transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, hitobj.transform.rotation.eulerAngles.y, hitobj.transform.rotation.eulerAngles.z); //endast för 2D
         }
 
+        if (m_killedbyPlayer)
+        {
+            killCount++;
+            killCountText.text = killCount.ToString();
+        }
+
         Destroy(gameObject);
     }
 
@@ -91,4 +120,5 @@ public class Health : MonoBehaviour {
         yield return new WaitForSeconds(time);
         m_immortal = false;
     }
+
 }
