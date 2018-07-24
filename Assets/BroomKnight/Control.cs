@@ -26,10 +26,20 @@ public class Control : MonoBehaviour {
     private float cdaudiohitTimer = 0.0f;
 
     public GameObject pausMenuObject;
+    public AudioClip pausMenuSound;
 
     private static int killedLastCheck = 0;
     public ParticleSystem psKillcount;
     private Color psKillcountStartColor;
+    private int killcountValue = 0;
+
+    private Renderer[] rends;
+    private Color rendStartColor;
+    public Color killcountColor = Color.white;
+
+    protected bool isCCed = false;
+    public GameObject m_ccedParticle;
+    public Color ccedColor = Color.white;
     // Use this for initialization
     void Start ()
     {
@@ -47,6 +57,15 @@ public class Control : MonoBehaviour {
 
         var main = psKillcount.main;
         psKillcountStartColor = main.startColor.color;
+
+        rends = GetComponentsInChildren<Renderer>();
+        rendStartColor = rends[0].material.GetColor("_Color");
+
+        //Time.timeScale = 0.2f;
+        if (m_ccedParticle)
+        {
+            JEffectPool.CreatePool(m_ccedParticle, 5);
+        }
 
         StartCoroutine(InitGame());
         StartCoroutine(KillCountChecker());
@@ -97,9 +116,10 @@ public class Control : MonoBehaviour {
             return;
         }
         //float input = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space) && pausMenuObject.activeSelf)
         {
             Cursor.visible = false;
+            asource.PlayOneShot(pausMenuSound);
             pausMenuObject.SetActive(!pausMenuObject.activeSelf);
             if(pausMenuObject.activeSelf)
             {
@@ -110,6 +130,11 @@ public class Control : MonoBehaviour {
                 Time.timeScale = 1;
             }
         }
+
+        //if(isCCed)
+        //{
+        //    return;
+        //}
 
         if (Vector3.Distance(m_startPos, m_moveObject.position) > 0.2f)
         {
@@ -131,31 +156,54 @@ public class Control : MonoBehaviour {
         {
             transform.localScale = new Vector3(m_startScale.x * 1, transform.localScale.y, transform.localScale.z);
             PlaySwingSound();
-            m_animator.SetTrigger(GetRandomAttack("Attack", 3));
+            //m_animator.SetTrigger(GetRandomAttack("Attack", 3));
+            m_animator.SetTrigger("Attack");
+            m_animator.SetInteger("MoveHorState", GetRandomAttack(3));
         }
         else if(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) //left
         {
             transform.localScale = new Vector3(m_startScale.x  *- 1, transform.localScale.y, transform.localScale.z);
             PlaySwingSound();
-            m_animator.SetTrigger(GetRandomAttack("Attack", 3));
+            //m_animator.SetTrigger(GetRandomAttack("Attack", 3));
+            m_animator.SetTrigger("Attack");
+            m_animator.SetInteger("MoveHorState", GetRandomAttack(3));
         }
         else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) //up
         {
             PlaySwingSound();
-            m_animator.SetTrigger(GetRandomAttack("AttackUp", 2));
+            //m_animator.SetTrigger(GetRandomAttack("AttackUp", 2));
+            m_animator.SetTrigger("Attack");
+            m_animator.SetInteger("MoveVerState", GetRandomAttack(2));
             //m_animator.SetTrigger("AttackUp");
         }
-
-
-
+        
     }
 
+    public void ResetStateIntegers() //called from blendtree
+    {
+        m_animator.SetInteger("MoveHorState", 0); //idle
+        m_animator.SetInteger("MoveVerState", 0); //idle
+        m_animator.ResetTrigger("Attack");
+    }
+    
+    string GetRandomAttack(string baseName, int maxIndex)
+    {
+        int r = Random.Range(1, maxIndex+1);
+        return baseName + r.ToString();
+    }
+
+    int GetRandomAttack(int maxIndex)
+    {
+        int r = Random.Range(1, maxIndex + 1);
+        return r;
+    }
 
     IEnumerator KillCountChecker()
     {
         while (this != null)
         {
-            yield return new WaitForSeconds(0.5f);
+            float alpha = 0;
+
             Health hcol = FindObjectOfType<Health>();
             if (hcol != null)
             {
@@ -163,21 +211,84 @@ public class Control : MonoBehaviour {
 
                 int difference = Mathf.Abs(killcount - killedLastCheck);
 
+                killcountValue += difference;
+                killcountValue = Mathf.Max(0, killcountValue - 1);
                 //use difference to show particlesystem!
-                float alpha = difference / 15;
-
-                var main = psKillcount.main;
-                main.startColor = new Color(psKillcountStartColor.r, psKillcountStartColor.g, psKillcountStartColor.b, alpha);
+                alpha = killcountValue / 4;
 
                 killedLastCheck = killcount;
 
             }
+
+            if (!isCCed)
+            {
+                var main = psKillcount.main;
+                main.startColor = new Color(psKillcountStartColor.r, psKillcountStartColor.g, psKillcountStartColor.b, alpha);
+
+                if (alpha >= 1f)
+                {
+                    for (int i = 0; i < rends.Length; i++)
+                    {
+                        rends[i].material.color = killcountColor;
+                    }
+
+                    m_animator.SetFloat("ExtraSpeed", 1.2f);
+                }
+                else
+                {
+                    for (int i = 0; i < rends.Length; i++)
+                    {
+                        rends[i].material.color = new Color(rendStartColor.r, rendStartColor.g, rendStartColor.b);
+                    }
+                    m_animator.SetFloat("ExtraSpeed", 1.0f);
+                }
+            }
+            else
+            {
+                var main = psKillcount.main;
+                main.startColor = new Color(psKillcountStartColor.r, psKillcountStartColor.g, psKillcountStartColor.b, 0); //ccad, visa ingen köttarparticle
+            }
+
+            yield return new WaitForSeconds(0.7f);
         }
     }
 
-    string GetRandomAttack(string baseName, int maxIndex)
+    public void CC()
     {
-        int r = Random.Range(1, maxIndex+1);
-        return baseName + r.ToString();
+        if(m_broom.enabled == true)
+        {
+            return;
+        }
+
+        if(isCCed == true)
+        {
+            return;
+        }
+
+        if (m_ccedParticle)
+        {
+            var hitobj = JEffectPool.CreateEffect(m_ccedParticle);
+            hitobj.transform.position = transform.position + new Vector3(0, 5, 0);
+            hitobj.transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
+
+            hitobj.GetComponent<AudioSource>().Play();
+            //hitobj.transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, hitobj.transform.rotation.eulerAngles.y, hitobj.transform.rotation.eulerAngles.z); //endast för 2D
+        }
+
+        for (int i = 0; i < rends.Length; i++)
+        {
+            rends[i].material.color = ccedColor;
+        }
+
+        m_animator.SetFloat("ExtraSpeed", 0.6f);
+        StartCoroutine(GetCCed());
     }
+
+    IEnumerator GetCCed()
+    {
+        isCCed = true;
+        yield return new WaitForSeconds(2.5f);
+        isCCed = false;
+    }
+
 }

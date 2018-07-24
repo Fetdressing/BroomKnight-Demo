@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: 207aac747fb34c844beeaf7920112d1e
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: FootController
+    100002: FootController1
+    100004: FootController2
+    100006: FootController3
+    100008: //RootNode
+    100010: ikHandle1
+    100012: ikHandle2
+    100014: ikHandle3
+    100016: ikHandle4
+    100018: ikHandle5
+    100020: ikHandle6
+    100022: ikHandle7
+    100024: ikHandle8
+    100026: joint1
+    100028: joint10
+    100030: joint11
+    100032: joint12
+    100034: joint13
+    100036: joint14
+    100038: joint15
+    100040: joint16
+    100042: joint17
+    100044: joint18
+    100046: joint19
+    100048: joint2
+    100050: joint20
+    100052: joint21
+    100054: joint22
+    100056: joint23
+    100058: joint24
+    100060: joint25
+    100062: joint26
+    100064: joint3
+    100066: joint4
+    100068: joint5
+    100070: joint6
+    100072: joint7
+    100074: joint8
+    100076: joint9
+    100078: legpPlane10
+    100080: legpPlane10 1
+    100082: legpPlane11
+    100084: legpPlane11 1
+    100086: legpPlane12
+    100088: legpPlane12 1
+    100090: legpPlane13
+    100092: legpPlane14
+    100094: legpPlane15
+    100096: legpPlane16
+    100098: legpPlane16 1
+    100100: legpPlane4
+    100102: legpPlane5
+    100104: legpPlane6
+    100106: pPlane1
+    100108: pPlane2
+    100110: pPlane3
+    100112: pPlane4
+    100114: pPlane5
+    400000: FootController
+    400002: FootController1
+    400004: FootController2
+    400006: FootController3
+    400008: //RootNode
+    400010: ikHandle1
+    400012: ikHandle2
+    400014: ikHandle3
+    400016: ikHandle4
+    400018: ikHandle5
+    400020: ikHandle6
+    400022: ikHandle7
+    400024: ikHandle8
+    400026: joint1
+    400028: joint10
+    400030: joint11
+    400032: joint12
+    400034: joint13
+    400036: joint14
+    400038: joint15
+    400040: joint16
+    400042: joint17
+    400044: joint18
+    400046: joint19
+    400048: joint2
+    400050: joint20
+    400052: joint21
+    400054: joint22
+    400056: joint23
+    400058: joint24
+    400060: joint25
+    400062: joint26
+    400064: joint3
+    400066: joint4
+    400068: joint5
+    400070: joint6
+    400072: joint7
+    400074: joint8
+    400076: joint9
+    400078: legpPlane10
+    400080: legpPlane10 1
+    400082: legpPlane11
+    400084: legpPlane11 1
+    400086: legpPlane12
+    400088: legpPlane12 1
+    400090: legpPlane13
+    400092: legpPlane14
+    400094: legpPlane15
+    400096: legpPlane16
+    400098: legpPlane16 1
+    400100: legpPlane4
+    400102: legpPlane5
+    400104: legpPlane6
+    400106: pPlane1
+    400108: pPlane2
+    400110: pPlane3
+    400112: pPlane4
+    400114: pPlane5
+    2100000: HorseMat
+    2300000: legpPlane10
+    2300002: legpPlane10 1
+    2300004: legpPlane11
+    2300006: legpPlane11 1
+    2300008: legpPlane12
+    2300010: legpPlane12 1
+    2300012: legpPlane13
+    2300014: legpPlane14
+    2300016: legpPlane15
+    2300018: legpPlane16
+    2300020: legpPlane16 1
+    2300022: legpPlane4
+    2300024: legpPlane5
+    2300026: legpPlane6
+    2300028: pPlane1
+    2300030: pPlane2
+    2300032: pPlane3
+    2300034: pPlane4
+    2300036: pPlane5
+    3300000: legpPlane10
+    3300002: legpPlane10 1
+    3300004: legpPlane11
+    3300006: legpPlane11 1
+    3300008: legpPlane12
+    3300010: legpPlane12 1
+    3300012: legpPlane13
+    3300014: legpPlane14
+    3300016: legpPlane15
+    3300018: legpPlane16
+    3300020: legpPlane16 1
+    3300022: legpPlane4
+    3300024: legpPlane5
+    3300026: legpPlane6
+    3300028: pPlane1
+    3300030: pPlane2
+    3300032: pPlane3
+    3300034: pPlane4
+    3300036: pPlane5
+    4300000: pPlane3
+    4300002: pPlane2
+    4300004: legpPlane15
+    4300006: legpPlane14
+    4300008: legpPlane13
+    4300010: legpPlane6
+    4300012: legpPlane5
+    4300014: legpPlane4
+    4300016: pPlane1
+    4300018: legpPlane12
+    4300020: legpPlane11
+    4300022: legpPlane16
+    4300024: legpPlane10
+    4300026: legpPlane12
+    4300028: legpPlane11
+    4300030: legpPlane16
+    4300032: legpPlane10
+    4300034: pPlane4
+    4300036: pPlane5
+    7400000: Horse_Walk
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HorseMat
+    second: {fileID: 2100000, guid: 598a3faa1e7630d44afbd5fc19b8fab5, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Horse_Walk
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: joint26
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\BroomKnight\Control.cs" />
+     <Compile Include="Assets\BroomKnight\Disabler.cs" />
      <Compile Include="Assets\BroomKnight\Effects\ExplosionChildren.cs" />
      <Compile Include="Assets\BroomKnight\Effects\SpawnOnDestroy.cs" />
      <Compile Include="Assets\BroomKnight\Effects\SpriteAlphaFade.cs" />
@@ -62,6 +63,7 @@
      <Compile Include="Assets\BroomKnight\PausMenu.cs" />
      <Compile Include="Assets\BroomKnight\PixelPingPong.cs" />
      <Compile Include="Assets\BroomKnight\PlayerBroom.cs" />
+     <Compile Include="Assets\BroomKnight\ResetStateIntegers.cs" />
      <Compile Include="Assets\BroomKnight\SmoothFollow.cs" />
      <Compile Include="Assets\BroomKnight\SpawnerUndead.cs" />
      <Compile Include="Assets\BroomKnight\ZombieMovement.cs" />

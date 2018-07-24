@@ -1,11 +1,11 @@
 WindowsStandalone
 PlayerPath?
-D:/UnityProjects/Builds/PC/BroomKnight/BroomKnight.exe
+D:/UnityProjects/Builds/PC/BroomKnightV1.0/BroomKnightV1.0.exe
 SceneListBegin?
 Assets/MyAssets/Scenes/MenuDemoScene.unity
 Assets/MyAssets/Scenes/BroomKnight.unity
 SceneListEnd?
-682f9b1105509e7909545cf53da38d31 Assembly-CSharp.dll:.SmoothFollow
+23bffd22b59fb4c11d2ebf61ce870de4 Assembly-CSharp.dll:.SmoothFollow
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 cf455f7a806648c6ed4c7d3e3f8a0e03 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 13bdb7c23815c33a33b37b0ba8dd39be UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -99,6 +99,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PausMenu
 13b55c24b5f2bc7aa5a6f41c697b9ecc Assembly-CSharp.dll:.SpawnOnDestroy
 d53c6db988143f8243e66864e14676b6 Assembly-CSharp.dll:.JEffect
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
@@ -133,7 +134,7 @@ dce8fc8d8d3aab55a55d15230a1bb1dc Assembly-CSharp.dll:.PlayerMovement
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerDamage
 205965134a5874db410d674ebdf33ba7 Assembly-CSharp.dll:.ExampleWheelController
 a6dbadbd364eaa3db872617dcf790431 Assembly-CSharp.dll:.WaveManager
-ca52f62eeb45ea1da723166c404be7ed Assembly-CSharp.dll:.Control
+606688ce345338b3884ec429f1b59b9c Assembly-CSharp.dll:.Control
 c08b196716247885d3b27f7f282b2568 Assembly-CSharp.dll:Assets.Pixelation.Example.Scripts.ImageEffectBase
 2cff91ae661ea192b24807075b0c0c77 Assembly-CSharp.dll:.EnemyDamage
 1163f798cca34750ae2011505b3552cf Assembly-CSharp.dll:.EnemyMovement
@@ -156,7 +157,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 787f0981f66b8341a7574be2ac515818 Assembly-CSharp.dll:.PixelPingPong
-4d8b818aa2c629e168f11fdeb893fb39 Assembly-CSharp.dll:.ZombieMovement
+37f626c8362dda975d2462e42f8e5f7e Assembly-CSharp.dll:.ZombieMovement
 d00920162893e7ecfc25fb206949e781 Assembly-CSharp.dll:.JPositionAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 f02726adeff0a3ec5905565234b372da UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -181,10 +182,11 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 a764ed39791e886a53f13cfce418447e Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PickerScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ResetStateIntegers
 a6bc246310af35bf040618a2dc852ebb Assembly-CSharp.dll:.JEmitter
 b706652205478694009996c498889e7a Assembly-CSharp.dll:.PlayerBroom
 26feb47618cdc181ff2a6942081f7f39 Assembly-CSharp.dll:Assets.Pixelation.Example.Scripts.PointLight
 6c15c7b0b86f9d97e742bbc3519c7ade Assembly-CSharp.dll:Assets.Pixelation.Scripts.Chunky
 5b95873405fe13edc3216d08f6caaf04 Assembly-CSharp.dll:Assets.Pixelation.Example.Scripts.Plane
-63476c3cd723e567416f94104be571f7 Assembly-CSharp.dll:.LoadSceneScript
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PausMenu
+88e5fec39e7bc4ae94af9be6ea3c363a Assembly-CSharp.dll:.LoadSceneScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Disabler

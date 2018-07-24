@@ -9,6 +9,7 @@ public class SmoothFollow : MonoBehaviour
     public float followDistance;
     public GameObject target;
     public Vector3 offset;
+    public float speedMult = 1f;
     Vector3 targetPos;
     // Use this for initialization
     void Start()
@@ -28,7 +29,7 @@ public class SmoothFollow : MonoBehaviour
 
             interpVelocity = targetDirection.magnitude * 5f;
 
-            targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime);
+            targetPos = transform.position + (targetDirection.normalized * interpVelocity * Time.deltaTime * speedMult);
 
             transform.position = Vector3.Lerp(transform.position, targetPos + offset, 0.25f);
 

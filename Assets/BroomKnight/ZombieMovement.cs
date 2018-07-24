@@ -17,6 +17,8 @@ public class ZombieMovement : MonoBehaviour
 
     private bool isGrounded = false;
     public LayerMask lm;
+
+    public bool unstopable = false;
     // Use this for initialization
     public virtual void Awake()
     {
@@ -71,6 +73,11 @@ public class ZombieMovement : MonoBehaviour
 
     public void DisableMovement(float time)
     {
+        if(unstopable)
+        {
+            return;
+        }
+
         if(m_disableMove != null)
         {
             return;

@@ -1,0 +1,257 @@
+fileFormatVersion: 2
+guid: f08da982349501045834150ce90b698f
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: FootController
+    100002: FootController1
+    100004: HandControl
+    100006: HandControl1
+    100008: ikHandle1
+    100010: ikHandle2
+    100012: ikHandle3
+    100014: ikHandle4
+    100016: ikHandle5
+    100018: ikHandle6
+    100020: joint1
+    100022: joint10
+    100024: joint11
+    100026: joint12
+    100028: joint13
+    100030: joint14
+    100032: joint15
+    100034: joint16
+    100036: joint17
+    100038: joint18
+    100040: joint19
+    100042: joint2
+    100044: joint3
+    100046: joint4
+    100048: joint5
+    100050: joint6
+    100052: joint7
+    100054: joint8
+    100056: joint9
+    100058: leg
+    100060: leg 1
+    100062: leg1
+    100064: leg1 1
+    100066: leg2
+    100068: leg2 1
+    100070: pPlane1
+    100072: pPlane2
+    100074: pPlane3
+    100076: pPlane4
+    100078: pPlane5
+    100080: pPlane6
+    100082: pPlane7
+    100084: pPlane8
+    100086: pPlane9
+    100088: //RootNode
+    400000: FootController
+    400002: FootController1
+    400004: HandControl
+    400006: HandControl1
+    400008: ikHandle1
+    400010: ikHandle2
+    400012: ikHandle3
+    400014: ikHandle4
+    400016: ikHandle5
+    400018: ikHandle6
+    400020: joint1
+    400022: joint10
+    400024: joint11
+    400026: joint12
+    400028: joint13
+    400030: joint14
+    400032: joint15
+    400034: joint16
+    400036: joint17
+    400038: joint18
+    400040: joint19
+    400042: joint2
+    400044: joint3
+    400046: joint4
+    400048: joint5
+    400050: joint6
+    400052: joint7
+    400054: joint8
+    400056: joint9
+    400058: leg
+    400060: leg 1
+    400062: leg1
+    400064: leg1 1
+    400066: leg2
+    400068: leg2 1
+    400070: pPlane1
+    400072: pPlane2
+    400074: pPlane3
+    400076: pPlane4
+    400078: pPlane5
+    400080: pPlane6
+    400082: pPlane7
+    400084: pPlane8
+    400086: pPlane9
+    400088: //RootNode
+    2100000: SimonMat
+    2300000: leg
+    2300002: leg 1
+    2300004: leg1
+    2300006: leg1 1
+    2300008: leg2
+    2300010: leg2 1
+    2300012: pPlane1
+    2300014: pPlane2
+    2300016: pPlane3
+    2300018: pPlane4
+    2300020: pPlane5
+    2300022: pPlane6
+    2300024: pPlane7
+    2300026: pPlane8
+    2300028: pPlane9
+    3300000: leg
+    3300002: leg 1
+    3300004: leg1
+    3300006: leg1 1
+    3300008: leg2
+    3300010: leg2 1
+    3300012: pPlane1
+    3300014: pPlane2
+    3300016: pPlane3
+    3300018: pPlane4
+    3300020: pPlane5
+    3300022: pPlane6
+    3300024: pPlane7
+    3300026: pPlane8
+    3300028: pPlane9
+    4300000: pPlane1
+    4300002: pPlane2
+    4300004: pPlane7
+    4300006: pPlane8
+    4300008: pPlane9
+    4300010: pPlane6
+    4300012: pPlane5
+    4300014: pPlane4
+    4300016: leg2
+    4300018: leg1
+    4300020: leg
+    4300022: leg2
+    4300024: leg1
+    4300026: leg
+    4300028: pPlane3
+    7400000: SimonSelf_Idle
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SimonMat
+    second: {fileID: 2100000, guid: 8e4531f6aafa828409c6c81111c0d8fb, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: SimonSelf_Idle
+      takeName: Take 001
+      firstFrame: 2
+      lastFrame: 159
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

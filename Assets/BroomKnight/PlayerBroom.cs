@@ -80,10 +80,13 @@ public class PlayerBroom : MonoBehaviour {
             }
             Vector3 moveDir = (col.transform.position - transform.root.position).normalized;
 
-            rig.constraints = RigidbodyConstraints.None;
-            rig.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
-            rig.AddForceAtPosition(moveDir * forceMult, transform.root.position, ForceMode.Impulse);
-            rig.useGravity = true;
+            if (zmov != null && !zmov.unstopable)
+            {
+                rig.constraints = RigidbodyConstraints.None;
+                rig.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
+                rig.useGravity = true;
+            }
+            rig.AddForceAtPosition(moveDir * forceMult, transform.root.position, ForceMode.Impulse);            
         }
     }
 }
