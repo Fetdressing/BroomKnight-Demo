@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/MyAssets/Scenes/BroomKnight.unity
+- path: Assets/CarDemo/CarScene.unity
   isLoaded: 1
   isActive: 1
